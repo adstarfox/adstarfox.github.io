@@ -1,0 +1,156 @@
+:root{
+    --header-height: 100px;
+    --main-height: calc(100vh - 140px);
+}
+
+header{
+    height: var(--header-height);
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: calc(50% - 312px);
+    padding-left: 5px;
+    align-items: center;
+    background-color: lightblue;
+}
+
+#my-name{
+    font-size: 80px;
+    font-weight: 300;
+}
+
+#pic-of-me{
+    height: calc(var(--header-height) - 5px);
+    width: calc(var(--header-height) - 5px);
+    border-radius: 50%;
+    border: solid black 2px;
+    background-image: url('images/PicofMe.png');
+    background-position: center;
+    background-size: 100%;
+}
+
+nav{
+    height: 40px;
+    background-color: aqua;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+a{
+    height: inherit;
+    width: 250px;
+    font-size: 39px;
+    text-align: center;
+}
+a:hover{
+    background-color: black;
+    color: red;
+    cursor:pointer;
+}
+
+main{
+    height: var(--main-height);
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
+h2{
+    font-size: 60px;
+    text-align: center;
+}
+
+#about{
+    width: 50%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#projects{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+#project-list{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100vw;
+}
+
+#project-list > li{
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+#project-list > li > p{
+    width: fit-content;
+    font-size: x-large;
+    display: list-item;
+    list-style-type:circle;
+}
+
+#contact{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 5%;
+}
+
+#contact-list{
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+#contact-list > li{
+    width: 300px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hovering:hover{
+    cursor: pointer;
+    background-color: gray;
+}
+
+#GitHub{
+    height: 100px;
+    width: 100px;
+
+}
+
+#LinkedIn{
+    height: 100px;
+}
+
+#phone{
+    height: 100px;
+    width: 100px;
+    border-radius: 100%;
+    border: solid black ;
+    background-image: url(images/Phone.png);
+    background-position: center;
+    background-size: 120%;
+}
+
+h3{
+    font-size: xx-large;
+    text-align: center;
+    width: fit-content;
+    border-bottom: solid black 2px;
+}
