@@ -69,6 +69,10 @@ h2{
     gap: 5%;
 }
 
+#about > p{
+    font-size: x-large;
+}
+
 #skills{
     height: 100%;
     width: 50vw;
