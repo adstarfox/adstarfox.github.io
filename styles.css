@@ -84,6 +84,7 @@ h2{
 }
 
 #skills-list > li{
+    height: 100px;
     width: 200px;
     display: flex;
     flex-direction: column;
@@ -91,7 +92,7 @@ h2{
 }
 
 .skills-imgs{
-    height: 100px;
+    height: 90px;
 }
 
 #projects{
