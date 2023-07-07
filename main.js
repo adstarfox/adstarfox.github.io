@@ -5,18 +5,59 @@ let windows = {
         </section>`,
     'skills-link': `<section id="skills">
             <h2>Skills</h2>
-            <ol>
-                <li>JavaScript</li>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>EC2</li>
-                <li>Express</li>
-                <li>Cors</li>
-                <li>Postman</li>
-                <li>SQL</li>
-                <li>Axios</li>
-                <li>Run Natural Gas</li>
-                <li>Being Tall</li>
+            <ol id="skills-list">
+                <li>
+                    <img class="skills-imgs "id="JavaScript-img" src="./images/javascript.png" alt="JavaScript">
+                    <h3>JavaScript</h3>
+                </li>
+                <li>
+                    <img class="skills-imgs "id="HTML-img" src="./images/HTML.png" alt="HTML">
+                    <h3>HTML</h3>
+                </li>
+                <li>
+                    <img class="skills-imgs "id=CSS-img" src="./images/CSS3_logo.svg.png" alt="CSS">
+                    <h3>CSS</h3>
+                </li>
+                <li>
+                    <img class="skills-imgs "id="node-img" src="./images/node.png" alt="Node">
+                    <h3>Node</h3>
+                </li>
+                <li>
+                    <img class="skills-imgs "id="ec2-img" src="./images/ec2.png" alt="EC2">
+                    <h3>EC2</h3>
+                </li>
+                <li>
+                    <img class="skills-imgs "id="express-img" src="./images/expressjs.png" alt="Express">
+                    <h3>Express</h3>
+                </li>
+                <li>
+                    <img class="skills-imgs "id="cors-img" src="./images/cors.png" alt="CORS">
+                    <h3>Cors</h3>
+                </li>
+                <li>
+                    <img class="skills-imgs "id="github-img" src="./images/github-mark.png" alt="GitHub">    
+                    <h3>GitHub</h3>
+                </li>
+                <li>
+                    <img class="skills-imgs "id="postman-img" src="./images/postman.png" alt="postman">
+                    <h3>Postman</h3>
+                </li>
+                <li>
+                    <img class="skills-imgs "id="sql-img" src="./images/sql.png" alt="SQL">
+                    <h3>SQL</h3>
+                </li>
+                <li>
+                    <img class="skills-imgs "id="Axios" src="./images/axios.png" alt="Axios">
+                    <h3>Axios</h3>
+                </li>
+                <li>
+                    <img class="skills-imgs "id="Pipe-img" src="./images/pipe.png" alt="Steal Pipe">
+                    <h3>Natual Gas Installer</h3>
+                </li>
+                <li>
+                    <img class="skills-imgs "id="Tall-img" src="./images/tall.png" alt="Tall">
+                    <h3>Being Tall</h3>
+                </li>
             </ol>
         </section>`,
     'projects-link': `<section id="projects">
