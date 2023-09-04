@@ -137,6 +137,7 @@ for(let i = 0; i < links.length; i++){
 
 
 const pageLoad = () => {
+    //hello
     projects.classList.add('active')
     main.innerHTML = windows['projects-link']
 }
