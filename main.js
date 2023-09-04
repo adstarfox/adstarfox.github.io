@@ -1,11 +1,10 @@
 let windows = {
-    'about-link': `<section id="about">
-            <h2>About</h2>
-            <p>I thrive in high pressure scenarios and am able to quickly adapt to an ever-changing environment. I enjoy the thrill of competition and value integrity, hard work and learning new skills! Working with people collaboratively and contributing to my team’s success is always on my to-do list!</p>
-        </section>`,
     'skills-link': `<section id="skills">
-            <h2>Skills</h2>
             <ol id="skills-list">
+                <li>
+                    <img class="skills-imgs "id="React" src="./images/React-icon.svg.png" alt="Axios">
+                    <h3>Axios</h3>
+                </li>
                 <li>
                     <img class="skills-imgs "id="JavaScript-img" src="./images/javascript.png" alt="JavaScript">
                     <h3>JavaScript</h3>
@@ -50,48 +49,47 @@ let windows = {
                     <img class="skills-imgs "id="Axios" src="./images/axios.png" alt="Axios">
                     <h3>Axios</h3>
                 </li>
-                <li>
-                    <img class="skills-imgs "id="Pipe-img" src="./images/pipe.png" alt="Steal Pipe">
-                    <h3>Natual Gas Installer</h3>
-                </li>
-                <li>
-                    <img class="skills-imgs "id="Tall-img" src="./images/tall.png" alt="Tall">
-                    <h3>Being Tall</h3>
-                </li>
             </ol>
         </section>`,
     'projects-link': `<section id="projects">
-            <h2>Projects</h2>
+
             <ol id="project-list">
                 <li id="project1">
-                        <h3>Pokemon Battle Simulator</h3>
-                        <p class="hovering" onclick="sendToWeb('PokeDemo')">Watch the 3 minute demo video</p>    
-                        <p class="hovering" onclick="sendToWeb('PokeBattles')">Go to the Website</p>
+                    <div class='poke-container'>
+                        <div class="poke-links-container">
+                            <p class="hovering" onclick="sendToWeb('PokeDemo')">Watch the 3 minute demo video</p>    
+                            <p class="hovering" onclick="sendToWeb('PokeBattles')">See The Repo</p>
+                        </div>
+                    </div>
                 </li>
 
                 <li id="project2">
-                    <h3>Project 2</h3>
-                    <p>This project is under construction</p>
+                    <div class='closet-container'>
+                        <h3>The Closet Guy</h3>
+                        <div class="links-container">
+                            <p class="hovering" onclick="sendToWeb('TheClosetGuy')">Watch the 3 minute demo video</p>    
+                            <p class="hovering" onclick="sendToWeb('TheClosetGuyRepo')">See The Repo</p>
+                        </div>
+                    </div>
                 </li>
 
             </ol>
     </section>`,
     'contact-link': `<section id="contact">
-            <h2>Contact Me</h2>
             <ol id="contact-list">
                 <li onclick="sendToWeb('GitHub')">
-                    <div class="hovering">
+                    <div class="GitHub">
                         <img id="GitHub" src="./images/github-mark.png" alt="GitHub Logo"> 
                         <h3>GitHub</h3>
                     </div>
                 </li>
                 <li onclick="sendToWeb('LinkedIn')">
-                    <div class="hovering">
+                    <div class="LinkedIn">
                         <img src="./images/LI-In-Bug.png" alt="LinkedIn Logo" id="LinkedIn">
                         <h3>LinkedIn</h3>
                     </div>
                 </li>
-                <li>
+                <li class="number">
                     <div id="phone"></div>
                     <h3>(385) 448-0319</h3>
                 </li>
@@ -101,18 +99,31 @@ let windows = {
 
 const links = document.querySelectorAll('a')
 const main  = document.querySelector('main')
+const projects  = document.getElementById('projects-link')
+const skills  = document.querySelector('#skills-link')
+const contact  = document.querySelector('#contact-link')
 
 const changeWindow = evt => {
+    projects.classList.remove('active')
+    skills.classList.remove('active')
+    contact.classList.remove('active')
     main.innerHTML = ''
     let section = evt.target.id
     main.innerHTML = windows[section]
+    console.log(evt.target.id)
+    evt.target.id === 'projects-link' &&  projects.classList.add('active')
+    evt.target.id === 'skills-link' &&  skills.classList.add('active')
+    evt.target.id === 'contact-link' &&  contact.classList.add('active')
+    // links.classlist.add('active')
 }
 
 let sites = {
     'GitHub': `https://github.com/adstarfox`,
     'LinkedIn': `https://www.linkedin.com/in/alex-durrant-b48707207`,
-    'PokeBattles': `http://3.144.92.77`,
-    'PokeDemo': `https://share.vidyard.com/watch/T6Y1xUwuLKNda1GyEzojhb?`
+    'PokeBattles': `https://github.com/adstarfox/PokeTeamBattle`,
+    'PokeDemo': `https://share.vidyard.com/watch/T6Y1xUwuLKNda1GyEzojhb?`,
+    'TheClosetGuy' : 'https://share.vidyard.com/watch/K9TYeed6De81QKuxGnbFo4?',
+    'TheClosetGuyRepo' : 'https://github.com/adstarfox/TheClosetGuy'
 
 }
 
@@ -126,7 +137,8 @@ for(let i = 0; i < links.length; i++){
 
 
 const pageLoad = () => {
-    main.innerHTML = windows['about-link']
+    projects.classList.add('active')
+    main.innerHTML = windows['projects-link']
 }
 
 pageLoad()

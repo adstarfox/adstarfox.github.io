@@ -1,17 +1,15 @@
 :root{
     --header-height: 100px;
-    --main-height: calc(100vh - 140px);
+    --main-height: calc(100vh - 155px);
 }
 
 header{
     height: var(--header-height);
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
-    gap: calc(50% - 312px);
-    padding-left: 5px;
+    justify-content: center;
     align-items: center;
-    background-color: lightblue;
+    background-color: rgba(173, 216, 230, 0.611);
 }
 
 #my-name{
@@ -20,8 +18,11 @@ header{
 }
 
 #pic-of-me{
-    height: calc(var(--header-height) - 5px);
-    width: calc(var(--header-height) - 5px);
+    position: absolute;
+    top: 3px;
+    left: 5px;
+    height: 135px;
+    width: 135px;
     border-radius: 50%;
     border: solid black 2px;
     background-image: url('images/PicofMe.png');
@@ -30,23 +31,32 @@ header{
 }
 
 nav{
-    height: 40px;
-    background-color: aqua;
+    height: 45px;
+    background-color: rgba(0, 128, 255, 0.468);
     display: flex;
     justify-content: center;
     align-items: center;
+    box-shadow: 0 0 0 1px;
 }
 
 a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: inherit;
     width: 250px;
-    font-size: 39px;
+    font-size: 2rem;
     text-align: center;
 }
 a:hover{
-    background-color: black;
-    color: red;
     cursor:pointer;
+    font-size: 2.2rem;
+    font-weight: bold;
+}
+
+.active{
+    font-size: 2.2rem;
+    font-weight: bold;
 }
 
 main{
@@ -74,66 +84,167 @@ h2{
 }
 
 #skills{
-    height: 100%;
+    height: calc(100vh - 150px);
     width: 50vw;
     display: flex;
     flex-direction: column;
-    gap: 5%;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    /* padding-bottom: 2px; */
 }
 
 #skills-list{
     height: 100%;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 
 #skills-list > li{
-    height: 100px;
+    height: 110px;
     width: 200px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 10px;
+    font-size: 1.25rem;
 }
 
 .skills-imgs{
-    height: 90px;
+    height: 100%;
 }
 
 #projects{
+    height: calc(100vh - 170px);
     display: flex;
     flex-direction: column;
     text-align: center;
     gap: 5%;
+    padding-top: 20px;
 }
 
 #project-list{
+    height: inherit;
+    width: 100vw;
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    width: 100vw;
+    justify-content: space-around;
+    align-items: center;
 }
 
-#project-list > li{
-    width: 500px;
+#project-list li{
+    height: 67%;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#project1 {
+    background-image: url(./images/Poke.png);
+    background-position: center;
+    background-repeat:no-repeat;
+    background-size:cover;
+    border-radius: 1rem;
+    box-shadow: 0 0 15px -5px;
+}
+
+.poke-container{
+    height: 100%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: flex-end;
+    border-radius: 1.25rem;
+    color: black;
+    font-weight: 800;
+    /* background-color: hsl(179,100%,45%, .3); */
+    /* text-shadow: 0px 0px 50px black; */
     gap: 20px;
+    padding-bottom: 3.5rem;
 }
 
-#project-list > li > p{
-    width: fit-content;
-    font-size: x-large;
-    display: list-item;
-    list-style-type:circle;
+.poke-links-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    text-align: center; 
+}
+
+.poke-links-container p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    width: 40%;
+    font-size: 1.60rem;
+}
+
+.closet-container{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 1.25rem;
+    color: white;
+    font-weight: 800;
+    /* background-color: hsl(179,100%,45%, .3); */
+    text-shadow: 0px 0px 50px black;
+    gap: 20px;
+    padding: 10px 0 10px 0;
+}
+
+.closet-container h3{
+    width: 100%;
+    font-size: 2.25rem;
+    border-bottom: solid hsl(179,100%,35%) 3px;
+    padding-bottom: 5px;
+}
+
+.links-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    text-align: center; 
+    border-top: solid hsl(179,100%,35%) 3px;
+    padding-top: 5px;
+}
+
+.links-container p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    width: 40%;
+    font-size: 1.60rem;
+}
+
+#project2{
+    color: white;
+    background-image: url(./images/grant-final-logo1.png);
+    background-position:center;
+    background-repeat:no-repeat;
+    background-size: 60%;
+    background-color: black;
+    border-radius: 1rem;
+    box-shadow: 0 0 10px -1px hsl(179,100%,35%);
 }
 
 #contact{
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content:flex-start;
     align-items: center;
     gap: 5%;
+    padding-top: 6rem;
 }
 
 #contact-list{
@@ -156,17 +267,41 @@ h2{
 
 .hovering:hover{
     cursor: pointer;
-    background-color: gray;
+    font-size: 2rem;
 }
 
-#GitHub{
+.GitHub,
+.GitHub img{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     height: 100px;
     width: 100px;
-
+    font-size: 1.5rem;
+    gap: 5px;
 }
 
-#LinkedIn{
+.GitHub img:hover{
+    cursor: pointer;
+    height: 110px;
+    width: 110px;
+}
+
+.LinkedIn,
+.LinkedIn img{
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
     height: 100px;
+    text-align: left;
+    font-size: 1.5rem;
+    gap: 5px;
+}
+
+.LinkedIn img:hover{
+    cursor: pointer;
+    height: 110px;
+    text-align: left;
 }
 
 #phone{
@@ -179,18 +314,8 @@ h2{
     background-size: 120%;
 }
 
-h3{
-    font-size: xx-large;
-    text-align: center;
-    width: fit-content;
-    border-bottom: solid black 2px;
-    background-repeat: no-repeat;
-}
-
-#Tall-img:active{
-    position: fixed;
-    top: calc(50% - 250px);
-    left: calc(50% - 300px);
-    height: 500px;
-    width: 600px;
+.number{
+    padding-top: 15px;
+    font-size: 1.5rem;
+    gap: 5px;
 }
